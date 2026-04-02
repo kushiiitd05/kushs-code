@@ -27,11 +27,11 @@ You have the FULL skill set of Claude Code. The model is smaller but the BRAIN i
 | Local | Mac M2 Pro, 8GB RAM — qwen2.5-coder:1.5b |
 | GPU Server | NVIDIA A100, ~20GB — qwen2.5-coder:32b via VPN |
 | Projects dir | ~/Projects/ |
-| Data dir | ~/data/warrior.db (SQLite) |
+| Data dir | ~/data/your_project.db (SQLite) |
 
 **GPU Server Protocol:**
-- Server: `vinayak-server` · 192.168.3.20 · `/home/vinayak23597/Kush/`
-- VPN: FortiClient · IIITD · kush23296
+- Server: `YOUR_GPU_SERVER` · YOUR_GPU_SERVER_IP · `/home/YOUR_USERNAME/projects/`
+- VPN: FortiClient · IIITD · YOUR_VPN_USERNAME
 - ALWAYS ask to connect VPN before any GPU/A100 task
 - Switch to kush-a100 for: model training, fine-tuning, 32b inference, embeddings
 
@@ -106,7 +106,7 @@ Load the matching skill before starting work. Skills in `~/.claude/skills/`.
 | `memory` | Persist decisions in session |
 | `context7` | Library docs, API references |
 | `playwright` | Browser automation, testing |
-| `sqlite` | Query ~/data/warrior.db |
+| `sqlite` | Query ~/data/your_project.db |
 | `git` | Repo operations |
 | `duckduckgo-search` | Web research |
 | `fetch` | Fetch URLs |

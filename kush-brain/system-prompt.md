@@ -53,7 +53,7 @@ For any task with 3+ steps:
 
 - ALWAYS route to A100 server (qwen2.5-coder:32b)
 - Ask user to connect FortiClient VPN (IIITD) first
-- Server: vinayak-server · 192.168.3.20
+- Server: YOUR_GPU_SERVER · YOUR_GPU_SERVER_IP
 - Use HuggingFace MCP for model search
 - For training: scp scripts to server, run there, pull results back
 

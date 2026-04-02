@@ -245,7 +245,7 @@ async function main() {
     let ollamaBase, ollamaModel, ollamaModels;
 
     if (provider === "ollama-a100") {
-      ollamaBase   = "http://192.168.3.20:11434";
+      ollamaBase   = "http://YOUR_GPU_SERVER_IP:11434";
       ollamaModel  = modelArg || "qwen2.5-coder:32b";
       ollamaModels = "qwen2.5-coder:32b,qwen2.5-coder:14b,qwen2.5-coder:7b";
       console.log("\n⚡  Using A100 GPU server — make sure FortiClient VPN is connected!\n");

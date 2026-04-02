@@ -5,7 +5,7 @@
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/bournesmartasfuck_kush/Projects", "/tmp"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Projects", "/tmp"],
       "_when": "Read/write files in ~/Projects — use for all file operations"
     },
     "git": {
@@ -30,8 +30,8 @@
     },
     "sqlite": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sqlite", "--db-path", "/Users/bournesmartasfuck_kush/data/warrior.db"],
-      "_when": "Query ~/data/warrior.db — warrior project data"
+      "args": ["-y", "@modelcontextprotocol/server-sqlite", "--db-path", "~/data/your_project.db"],
+      "_when": "Query ~/data/your_project.db"
     },
     "context7": {
       "command": "npx",
@@ -70,12 +70,12 @@
     },
     "ollama-mcp": {
       "command": "python3",
-      "args": ["/Users/bournesmartasfuck_kush/.claude/mcp-servers/ollama_mcp.py"],
+      "args": ["~/.claude/mcp-servers/ollama_mcp.py"],
       "_when": "Use Ollama as a TOOL from within Claude Code — offload mechanical subtasks to local model",
       "_tools": ["ollama_generate", "ollama_chat", "ollama_status"],
       "_models": {
         "local": "qwen2.5-coder:1.5b @ localhost:11434",
-        "server": "qwen2.5-coder:32b @ 192.168.3.20:11435 (VPN required)"
+        "server": "qwen2.5-coder:32b @ YOUR_GPU_SERVER_IP:11435 (VPN required)"
       }
     }
   },
