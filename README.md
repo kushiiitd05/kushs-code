@@ -34,7 +34,7 @@ Built by deep-analyzing 5 Claude Code source repos and stacking the full skill/a
 | **40 built-in tools** | File I/O, Bash, Glob, Grep, Web, MCP, Agent spawning |
 | **64 skills** | TDD, RAG, NLP, security review, swarm orchestration + 2 Kush-specific |
 | **72 agents** | nlp-engineer, llm-architect, ui-designer, tdd-guide, and more |
-| **3 model tiers** | `kush` (1.5b local) → `kush-a100` (32b GPU) → `kush-cloud` (Anthropic) |
+| **3 model tiers** | `kush` (1.5b local) → `your_gpu` (32b GPU) → `your-cloud` (Anthropic) |
 | **Full MCP** | filesystem, git, memory, playwright, sqlite, context7, duckduckgo, mem0 |
 | **Smart context** | System prompt auto-sized per model (mini/mid/full) |
 | **Zero cost** | Runs 100% locally — no API keys required |
