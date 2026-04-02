@@ -1,9 +1,18 @@
 {
-  "name": "claude-code-local-runner",
+  "name": "kushs-code",
+  "version": "1.0.0",
   "private": true,
+  "description": "Kush's Code — Ollama-first AI coding assistant built on Claude Code",
   "scripts": {
-    "claude": "node package/cli.js",
-    "claude:help": "node package/cli.js --help",
+    "kush":           "node kush-launcher.js",
+    "kush:ollama":    "node kush-launcher.js --provider ollama",
+    "kush:a100":      "node kush-launcher.js --provider ollama-a100",
+    "kush:cloud":     "node kush-launcher.js --provider anthropic",
+    "kush:patch":     "node kush-patch-branding.js",
+    "claude":         "node package/cli.js",
     "claude:version": "node package/cli.js --version"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.0"
   }
 }

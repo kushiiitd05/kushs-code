@@ -1,0 +1,85 @@
+{
+  "_comment": "Kush's Code MCP Configuration — mirrors ~/.claude/mcp.json with Kush-specific notes",
+  "_usage": "These MCPs are available in every Kush's Code session (shared with ~/.claude/mcp.json)",
+
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/bournesmartasfuck_kush/Projects", "/tmp"],
+      "_when": "Read/write files in ~/Projects — use for all file operations"
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git"],
+      "_when": "Git operations, commit history, blame"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "_when": "Persist decisions within a session"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "_when": "ANY task with 3+ steps — activate automatically for architecture/debugging"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "_when": "Browser automation, E2E testing, web scraping"
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite", "--db-path", "/Users/bournesmartasfuck_kush/data/warrior.db"],
+      "_when": "Query ~/data/warrior.db — warrior project data"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "_when": "Library docs, API references — check before implementing any library usage"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "_when": "Fetch URLs, read web pages, download content"
+    },
+    "duckduckgo-search": {
+      "command": "npx",
+      "args": ["-y", "duckduckgo-mcp-server"],
+      "_when": "Web search — primary search tool (Brave not configured)"
+    },
+    "searxng": {
+      "command": "npx",
+      "args": ["-y", "searxng-mcp"],
+      "_when": "Web search fallback"
+    },
+    "mem0": {
+      "command": "npx",
+      "args": ["-y", "@mem0ai/mem0-mcp"],
+      "_when": "Cross-session memory — query at EVERY session start for project context"
+    },
+    "mcp-memory-service": {
+      "command": "npx",
+      "args": ["-y", "@doobidoo/mcp-memory-service"],
+      "_when": "Knowledge graph — persist entities and relationships across sessions"
+    },
+    "huggingface": {
+      "command": "npx",
+      "args": ["-y", "@huggingface/mcp-client"],
+      "_when": "HF model search, dataset lookup, model cards — for NLP/ML tasks"
+    },
+    "ollama-mcp": {
+      "command": "python3",
+      "args": ["/Users/bournesmartasfuck_kush/.claude/mcp-servers/ollama_mcp.py"],
+      "_when": "Use Ollama as a TOOL from within Claude Code — offload mechanical subtasks to local model",
+      "_tools": ["ollama_generate", "ollama_chat", "ollama_status"],
+      "_models": {
+        "local": "qwen2.5-coder:1.5b @ localhost:11434",
+        "server": "qwen2.5-coder:32b @ 192.168.3.20:11435 (VPN required)"
+      }
+    }
+  },
+
+  "_active_rule": "Never build UI from scratch without checking magic-ui MCP first",
+  "_sequential_thinking_rule": "Use sequential-thinking for ANY architecture decision, debugging chain, or 3+ step research"
+}
